@@ -1,0 +1,29 @@
+{
+  "name": "a2-postgres",
+  "version": "1.0.0",
+  "description": "A2 task service: in-memory store swapped for a real Postgres repository, app + db run together via docker compose.",
+  "main": "dist/src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/src/index.js",
+    "dev": "tsx watch src/index.ts",
+    "seed": "tsx scripts/seed.ts",
+    "explain": "tsx scripts/explain.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "pg": "^8.12.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.9",
+    "@types/pg": "^8.11.6",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3"
+  },
+  "optionalDependencies": {
+    "ioredis": "^5.4.1"
+  }
+}
